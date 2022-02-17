@@ -1,3 +1,9 @@
+# To Do List App desarrollada con Hooks en ReactJs.
+
+Este es un ejemplo de una clásica aplicación de Lista de tareas o "ToDoList" realizada en ReactJs. 
+
+
+<!--- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-->
