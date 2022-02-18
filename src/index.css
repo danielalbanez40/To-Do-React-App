@@ -12,6 +12,10 @@ code {
     monospace;
 } */
 
+form {
+  width: 30%;
+}
+
 .components-container {
   display: flex;
   justify-content: center;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-export default function ToDoComponent() {
+const ToDoCardComponent = () => {
   return (
     <>
       <Card style={{ width: "18rem" }} className="card col-md-2">
@@ -25,3 +25,5 @@ export default function ToDoComponent() {
     </>
   );
 }
+
+export default ToDoCardComponent;
