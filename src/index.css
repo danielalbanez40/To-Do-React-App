@@ -21,13 +21,17 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .card {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
   margin-bottom: 1.65rem;
+  width: 1000px; 
+  
 }
 
 #Card {
@@ -36,6 +40,27 @@ form {
 }
 
 .card-body {
+  
   background-color: #282c34;
+  width: 100%;
+  text-align: justify;
 }
 
+section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.close-button {
+  display: flex;
+  width: 10%;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}

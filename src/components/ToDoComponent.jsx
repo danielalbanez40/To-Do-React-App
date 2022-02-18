@@ -26,6 +26,7 @@ const ToDoComponent = () => {
       <h1>ToDo-List React App</h1>
 
       <ToDoFormComponent crearLista={crearLista} />
+    <div className="contenedor">
 
       {todos.map((el) => (
         <ToDoCardComponent
@@ -35,6 +36,7 @@ const ToDoComponent = () => {
           editToDo={editToDo}
         />
       ))}
+    </div>
     </div>
   );
 };

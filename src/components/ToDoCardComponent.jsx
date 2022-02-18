@@ -12,33 +12,33 @@ const ToDoCardComponent = ({ todo, deleteToDo, editToDo }) => {
         key={todo.id}
       >
         <Card.Body className="card-body">
-          <CloseButton
-            className="offset-5 bg-light"
-            onClick={() => deleteToDo(id)}
-          />
-          <span>
-            <Badge bg="danger" className="offset-10">
-              {prioridad && "Prioritario"}
-            </Badge>
+          <section>
+            <CloseButton
+              className="close-button bg-light mb-3"
+              onClick={() => deleteToDo(id)}
+            />
+            <span>
+              <Badge bg="danger" className="me-2">
+                {prioridad && "Prioritario"}
+              </Badge>
 
-            <Badge bg="info" className="offset-10">
-              {estado ? "Completado" : "Pendiente"}
-            </Badge>
-          </span>
-
+              <Badge bg="info" className="me-2">
+                {estado ? "Completado" : "Pendiente"}
+              </Badge>
+            </span>
+          </section>
+          <hr />
           <Card.Title style={{ fontSize: "30px" }} className="fw-bold">
             {titulo}
           </Card.Title>
-
           <hr />
           <Card.Text>{descripcion}</Card.Text>
-
           {/* <Button variant="outline-danger" style={{ color: "#fafafa" }}>
             Eliminar
           </Button> */}
           <Button
             variant="outline-warning"
-            style={{ marginLeft: "1rem", color: "#fafafa" }}
+            style={{ color: "#fafafa" }}
             onClick={() => editToDo(id)}
           >
             Cambiar Estado

@@ -133,7 +133,7 @@ const ToDoFormComponent = ({crearLista}) => {
           Añadir Tarea
         </Button>
       </Form>
-      <h3 style={{ marginTop: "1rem" }}>Listado de Tareas:</h3>
+      <h3 style={{ marginTop: "1rem", marginBottom: "2rem" }}>Listado de Tareas:</h3>
     </>
   );
 };
