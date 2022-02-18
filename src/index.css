@@ -28,7 +28,11 @@ form {
   justify-content: center;
   align-items: center;
   margin-bottom: 1.65rem;
-  
+}
+
+#Card {
+  background-color: #282c34;
+  border: thin solid #000;
 }
 
 .card-body {

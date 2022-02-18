@@ -1,31 +1,84 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
+const ToDoFormComponent = ({crearLista}) => {
 
-const ToDoFormComponent = () => {
-
+  //Defino el valor inicial de los elementos del formulario segun su atributo name
   const initialState = {
     titulo: "",
-    descripcion:"",
-    estado:"pendiente",
-    prioridad: false
-  }
-
-  const [todo, setTodo] = useState(initialState);
-  
-  const {titulo, descripcion, estado, prioridad} = todo
-
-  const handleChange = (e) => {
-    
+    descripcion: "",
+    estado: "pendiente",
+    prioridad: false,
   };
 
+  //creo un usesState con el estado inicial
+  const [todo, setTodo] = useState(initialState);
+
+  //Destructuro variable de estado todo
+  const { titulo, descripcion, estado, prioridad } = todo;
+
+  //Creo el manejador de eventos de formularios
+  const handleChange = (e) => {
+    //desestructuro los atributos de los elementos del formulario
+    const { name, value, checked, type } = e.target;
+
+    //Trae todo el contenido del objeto inicial y compara el valor del checkbox
+    setTodo((old_value) => ({
+      ...old_value,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  //Creo el manejador para enviar formulario
   const handleSubmit = (e) => {
     e.preventDefault();
+    //comprueba si viene vacio el campo Titulo y posiciona el foco en el campo correspondiente
+    if (!titulo.trim()) {
+      e.target[0].focus(); //Posiciona el foco en el input del Título
+      Swal.fire({
+        title: "Se produjo un Error!",
+        text: "Debes completar todos los campos para crear tu tarea",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+      return;
+    }
+
+    //comprueba si viene vacio el campo descripcion y posiciona el foco en el campo correspondiente
+    if (!descripcion.trim()) {
+      e.target[1].focus(); //Posiciona el foco en el input del Título
+      Swal.fire({
+        title: "Se produjo un Error!",
+        text: "Debes completar todos los campos para crear tu tarea",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+      return;
+    }
+
+    Swal.fire({
+      title: "Bien hecho!",
+      text: "Tu tarea fue creada con éxito!!",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    });
+
+    crearLista({
+      titulo,
+      descripcion,
+      estado: estado === 'pendiente' ? false : true,
+      prioridad,
+      id: Date.now()
+    });
+
+    setTodo(initialState);
+
   };
 
   return (
     <>
-      <h2 style={{ marginTop: "1rem" }}>Listado de Tareas</h2>
+      
 
       <Form className="mt-3" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicText">
@@ -57,12 +110,12 @@ const ToDoFormComponent = () => {
             onChange={handleChange}
           >
             <option value="pendiente">Pendiente</option>
-            <option value="completado">Realizado</option>
+            <option value="completado">Completado</option>
           </Form.Select>
 
           <Form.Check
             className="mt-2"
-            name="prioritario"
+            name="prioridad"
             type="checkbox"
             id="chechboxform"
             label="Prioritario"
@@ -79,6 +132,7 @@ const ToDoFormComponent = () => {
           Añadir Tarea
         </Button>
       </Form>
+      <h3 style={{ marginTop: "1rem" }}>Listado de Tareas:</h3>
     </>
   );
 };
