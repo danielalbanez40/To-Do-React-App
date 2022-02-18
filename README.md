@@ -1,6 +1,7 @@
 # To Do List App desarrollada con Hooks en ReactJs.
 
-Este es un ejemplo de una clásica aplicación de Lista de tareas o "ToDoList" realizada en ReactJs. 
+Este es un ejemplo de una clásica aplicación de Lista de tareas o "ToDoList" realizada en ReactJs.
+En esta aplicación se utilizó ReactBootstrap para el diseño de la interfaz de usuario, además se aplicó de la librería SweetAlert2 para validacion del formulario. 
 
 
 <!--- 
