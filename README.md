@@ -1,7 +1,21 @@
 # To Do List App desarrollada con Hooks en ReactJs.
 
-Este es un ejemplo de una clásica aplicación de Lista de tareas o "ToDoList" realizada en ReactJs.
-En esta aplicación se utilizó ReactBootstrap para el diseño de la interfaz de usuario, además se aplicó de la librería SweetAlert2 para validacion del formulario. 
+Este es un ejemplo de una clásica aplicación de Lista de tareas o **"ToDoList"** realizada usando la librería [ReactJs](https://es.reactjs.org/).
+
+Esta aplicación fue iniciada mediante [create-react-app](https://create-react-app.dev/) y se utilizó [ReactBootstrap](https://react-bootstrap.github.io/) para el diseño de la interfaz de usuario y se aplicó de la librería de alertas [SweetAlert2](https://sweetalert2.github.io/) para una pequeña validacion del formulario y mostrar alertas dentro de la aplicación. 
+
+## Como probar la App:
+
+Para probar la app debe instalar NodeJs en su ordenador y luego posicionarse en la carpeta raíz del proyecto, luego debe ejecutar el siguiente comando:
+
+### **`npm start`**
+
+Esto va a ejecutar la aplicación en modo desarrollo.
+
+Luego de realizar los pasos anteriores,para poder visualizarla en el navegador, ingrese al siguiente enlace: [Ejecutar App](https://localhost:3000)
+
+
+
 
 
 <!--- 
