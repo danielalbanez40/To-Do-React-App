@@ -4,15 +4,17 @@ Este es un ejemplo de una clásica aplicación de Lista de tareas o **"ToDoList"
 
 Esta aplicación fue iniciada mediante [create-react-app](https://create-react-app.dev/) y se utilizó [ReactBootstrap](https://react-bootstrap.github.io/) para el diseño de la interfaz de usuario y se aplicó de la librería de alertas [SweetAlert2](https://sweetalert2.github.io/) para una pequeña validacion del formulario y mostrar alertas dentro de la aplicación. 
 
-## Como probar la App:
+## Ver demo:
 
-Para probar la app debe instalar NodeJs en su ordenador y luego posicionarse en la carpeta raíz del proyecto, luego debe ejecutar el siguiente comando:
+Para probar el funcionamiento del sitio puede hacerlo desde el siguiente enlace: [Ver Demo](https://danielalbanez40.github.io/To-Do-React-App/)
+
+<!-- Para probar la app debe instalar NodeJs en su ordenador y luego posicionarse en la carpeta raíz del proyecto, luego debe ejecutar el siguiente comando:
 
 ### **`npm start`**
 
 Esto va a ejecutar la aplicación en modo desarrollo.
 
-Luego de realizar los pasos anteriores,para poder visualizarla en el navegador, ingrese al siguiente enlace: [Ejecutar App](https://localhost:3000)
+Luego de realizar los pasos anteriores,para poder visualizarla en el navegador, ingrese al siguiente enlace: [Ejecutar App](https://localhost:3000) -->
 
 
 
